@@ -1,0 +1,9 @@
+---
+accounts:
+- type: Amazon
+  name: aws
+  accountNumber: "377425456666"
+  accessKeyId: blabla
+  secretAccessKeyId: blabla
+  x509Cert: "/home/toune/.hammr/cert-4PKBEMMQVPYGBUGVRZDUUKIQW34SKYGE.pem"
+  x509PrivateKey: "/home/toune/.hammr/pk-4PKBEMMQVPYGBUGVRZDUUKIQW34SKYGE.pem"

@@ -1,0 +1,11 @@
+{
+    "accounts":
+    {
+      "type": "Docker",
+      "name": "Docker Hub",
+      "endpointUrl": "https://index.docker.io",
+      "login": "toune",
+      "password": "blabla"
+    }
+
+}

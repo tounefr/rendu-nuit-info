@@ -1,0 +1,16 @@
+{
+  "builders": [
+    {
+      "type": "Amazon AWS",
+      "account": {
+       "name": "aws"
+      },
+      "installation": {
+        "diskSize": 10240
+      },
+      "region": "eu-west-1",
+      "s3bucket": "nuitinfobucket"
+    }
+  ]
+}
+

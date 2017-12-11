@@ -1,0 +1,54 @@
+{
+  "stack": {
+    "name": "portfolio",
+    "version": "1.0",
+    "os": {
+      "name": "Ubuntu",
+      "version": "16.04",
+      "arch": "x86_64",
+      "profile": "Minimal"
+    },
+    "bundles": [
+      {
+      "name": "prod",
+      "version": "1.0",
+      "files": [
+        {
+          "name": "supervisor",
+	  "source": "docker/supervisord.conf",
+	  "destination": "/etc/supervisor/conf.d/supervisord.conf"
+	}
+      ]
+      }
+    ],
+    "config": [
+      {
+        "name": "firstboot",
+	"source": "bootstrap.sh",
+	"type": "bootscript",
+	"frequency": "firstboot"
+      },
+      {
+        "name": "everyboot",
+        "source": "everyboot.sh",
+        "type": "bootscript",
+        "frequency": "everyboot"
+      } 
+    ]
+  },
+  "builders": [
+    {
+      "type": "Docker",
+      "account": {
+        "type": "Docker",
+        "name": "Docker Hub",
+        "endpointUrl": "https://index.docker.io",
+        "login": "toune",
+        "password": "blabla"
+      },
+      "namespace": "toune",
+      "repositoryName": "uforge",
+      "tagName": "latest"
+    }
+  ]
+}
